@@ -34,18 +34,18 @@ public class TestOrderCard {
         driver.quit();
     }
 
-        @Test
-        void Test () {
-            driver.get("http://localhost:9999");
-            driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Иван Петров");
-            driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79998887766");
-            driver.findElement(By.className("checkbox__box")).click();
-            driver.findElement(By.className("button__content")).click();
+    @Test
+    void Test() {
+        driver.get("http://localhost:9999");
+        driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Иван Петров");
+        driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79998887766");
+        driver.findElement(By.className("checkbox__box")).click();
+        driver.findElement(By.className("button__content")).click();
 
-            String actual = driver.findElement(By.className("paragraph")).getText().trim();
-            String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
+        String actual = driver.findElement(By.className("paragraph")).getText().trim();
+        String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
 
-            Assertions.assertEquals(expected, actual);
-        }
-
+        Assertions.assertEquals(expected, actual);
     }
+
+}
