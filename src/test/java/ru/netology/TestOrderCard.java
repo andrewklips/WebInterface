@@ -36,7 +36,7 @@ public class TestOrderCard {
 
     @Test
     void shouldTestCorrect() {
-        driver.get("http://localhost:9999");
+
         driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Иван Петров");
         driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79998887766");
         driver.findElement(By.cssSelector("checkbox__box")).click();
