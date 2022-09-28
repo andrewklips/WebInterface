@@ -39,7 +39,7 @@ public class TestOrderCard {
 
         driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Иван Петров");
         driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79998887766");
-        driver.findElement(By.cssSelector("checkbox__box")).click();
+        driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button__content")).click();
 
         String text = driver.findElement(By.className("paragraph")).getText();
